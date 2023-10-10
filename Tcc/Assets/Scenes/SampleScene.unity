@@ -8330,6 +8330,7 @@ MonoBehaviour:
   Speed: 8
   JumpForce: 14
   IsJumping: 0
+  IsPlayng: 0
 --- !u!50 &822189475
 Rigidbody2D:
   serializedVersion: 4

@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rig;
     public float JumpForce;
     public bool IsJumping;
+    public bool IsPlayng;
 
     private Animator anim;
 
@@ -76,4 +77,20 @@ public class PlayerScript : MonoBehaviour
         }
 
     }
+
+     public void Play()
+     {
+         if (Input.GetKey(KeyCode.M))
+         {
+             anim.SetBool("MusicAnim", true);
+             IsPlayng = true;
+         }
+
+         if (Input.GetKeyUp(KeyCode.M))
+         {
+             anim.SetBool("MusicAnim", false);
+             IsPlayng = false;
+         }
+     }
 }
+

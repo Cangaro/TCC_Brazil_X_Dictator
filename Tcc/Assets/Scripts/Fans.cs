@@ -22,7 +22,10 @@ public class Fans : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<FamousPoints>().Pontosganhar(addFanPoint);
+            if (collision.gameObject.GetComponent<PlayerScript>().IsPlayng)
+            {
+                collision.gameObject.GetComponent<FamousPoints>().Pontosganhar(addFanPoint);
+            }
         }
     }
 }
