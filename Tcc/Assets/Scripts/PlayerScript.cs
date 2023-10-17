@@ -23,8 +23,11 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Play();
+        if (IsPlayng) return;
         Move();
         Jump();
+        
     }
     public void Move()
     {
@@ -82,14 +85,16 @@ public class PlayerScript : MonoBehaviour
      {
          if (Input.GetKey(KeyCode.M))
          {
-             anim.SetBool("MusicAnim", true);
              IsPlayng = true;
+             anim.SetBool("MusicAnim", true);
+             
          }
 
          if (Input.GetKeyUp(KeyCode.M))
          {
-             anim.SetBool("MusicAnim", false);
              IsPlayng = false;
+             anim.SetBool("MusicAnim", false);
+             
          }
      }
 }

@@ -32,6 +32,8 @@ public class FamousPoints : MonoBehaviour
         if(FamousAtualPoints >= 100)
         {
             Debug.Log("YOU WIN");
+            //fazer quando der YOU WIN, passar pro proximo cenário
+            
         }
 
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,14 +19,32 @@ public class Fans : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Esta colidindo");
             if (collision.gameObject.GetComponent<PlayerScript>().IsPlayng)
             {
                 collision.gameObject.GetComponent<FamousPoints>().Pontosganhar(addFanPoint);
             }
+        }
+    }
+    
+//verificardo
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Esta entrando");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Esta saindo");
         }
     }
 }
