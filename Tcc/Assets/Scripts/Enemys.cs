@@ -9,20 +9,29 @@ public class Enemys : MonoBehaviour
 
     private float Timer;
     private bool WalkRight;
+    private Animator _animator;
 
     private Rigidbody2D rig;
 
     public int roubodepontos;
+    public bool PARAR;
 
     // Start is called before the first frame update
     void Start()
     {
+        _animator = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (PARAR)
+        {
+            rig.velocity = Vector2.zero;
+            return;
+        }
+        
         Timer += Time.deltaTime;
 
         if (Timer >= WalkTime)
@@ -45,9 +54,12 @@ public class Enemys : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+    //QUANDO ESTIVER PERTO DO JOGADOR ELE fazer animação de bater para dar dano.
         if(collision.gameObject.CompareTag("Player"))
         {
+            _animator.Play("MilicoBatendoCan");
             collision.gameObject.GetComponent<FamousPoints>().Pontosperder(roubodepontos);
+            PARAR = true;
         }
     }
 }
