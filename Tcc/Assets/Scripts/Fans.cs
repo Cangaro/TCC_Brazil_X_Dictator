@@ -6,8 +6,12 @@ using UnityEngine;
 public class Fans : MonoBehaviour
 {
     public int addFanPoint;
+    private PlayerScript Player;
+    public bool Satisfazer;
 
+    public float grauSatisfacao = 1;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +19,7 @@ public class Fans : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -36,7 +37,23 @@ public class Fans : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Esta entrando");
+            Player = col.GetComponent<PlayerScript>();
+            Satisfazer = true;
+        }
+    }
+
+    void Update()
+    {
+        if (Satisfazer)
+        {
+            if (Player.IsPlayng)
+            {
+                grauSatisfacao -= Time.deltaTime;
+                if (grauSatisfacao <= 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
     }
 
@@ -44,7 +61,7 @@ public class Fans : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Esta saindo");
+            Satisfazer = false;
         }
     }
 }
