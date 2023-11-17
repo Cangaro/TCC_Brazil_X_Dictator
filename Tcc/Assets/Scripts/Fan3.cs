@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fans : MonoBehaviour
+public class Fan3 : MonoBehaviour
 {
     public int addFanPoint;
     private PlayerScript Player;
@@ -44,9 +44,9 @@ public class Fans : MonoBehaviour
         {
             if (Player.IsPlayng)
             {
-                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("FansIddle"))
+                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("FanIddle3"))
                 {
-                    _animator.Play("FanDancing");
+                    _animator.Play("FanDancing3");
                 }
                 grauSatisfacao -= Time.deltaTime;
                 if (grauSatisfacao <= 0)
@@ -56,9 +56,9 @@ public class Fans : MonoBehaviour
             }
             else
             {
-                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("FansDancing"))
+                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("FanDancing3"))
                 {
-                    _animator.Play("FansIddle");
+                    _animator.Play("FanIddle3");
                 }
             }
         }

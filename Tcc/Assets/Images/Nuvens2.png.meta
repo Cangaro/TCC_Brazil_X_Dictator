@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4116729963b1c9a488225923d9b4b56c
+guid: 6cf31fc8b7738ec4f8c6c31ef80fe428
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0}
-  spritePixelsToUnits: 32
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,112 +126,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: NPC4_Dance_0
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 0
-        width: 15
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 685c55ef21c69ec41894b43b42936aff
-      internalID: 501755245
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC4_Dance_1
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 0
-        width: 15
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87ed50751e16679408f45158ee2314cc
-      internalID: -1308218097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC4_Dance_2
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 0
-        width: 15
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fdbae18cdf212445ba6924f51da1723
-      internalID: -2006937773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC4_Dance_3
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 0
-        width: 15
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55c4f00aeba43ef44be21f5f4d24081b
-      internalID: 1979196415
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC4_Dance_4
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 0
-        width: 15
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4faf0050c7146eb4fb12484d3bff5e1d
-      internalID: 1742334952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -242,12 +137,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      NPC4_Dance_3: 1979196415
-      NPC4_Dance_0: 501755245
-      NPC4_Dance_1: -1308218097
-      NPC4_Dance_2: -2006937773
-      NPC4_Dance_4: 1742334952
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

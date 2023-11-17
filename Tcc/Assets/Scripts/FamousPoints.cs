@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FamousPoints : MonoBehaviour
 {
     public Slider QntPoints;
 
+    public string ProxforPoints;
     public int FamousMaxPoints;
     public int FamousAtualPoints; 
 
@@ -29,11 +31,9 @@ public class FamousPoints : MonoBehaviour
         FamousAtualPoints += pontosparaReceber;
         QntPoints.value = FamousAtualPoints;
 
-        if(FamousAtualPoints >= 100)
+        if(FamousAtualPoints >= FamousMaxPoints)
         {
-            Debug.Log("YOU WIN");
-            //fazer quando der YOU WIN, passar pro proximo cenário
-            
+            SceneManager.LoadScene(ProxforPoints);
         }
 
     }

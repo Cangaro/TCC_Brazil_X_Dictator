@@ -1,11 +1,14 @@
  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+ 
 
 public class Clarinete : MonoBehaviour
 {
     private SpriteRenderer sr;
     private BoxCollider2D Bc;
+    public int addFanPoint;
+    
 
     public GameObject Collected;
     // Start is called before the first frame update
@@ -15,16 +18,21 @@ public class Clarinete : MonoBehaviour
         Bc = GetComponent<BoxCollider2D>();
     }
 
-    //depois mudar para quando interagir ele ser destruido, e não apenas quando encostar.
+    //depois mudar para quando interagir ele ser destruido, e nï¿½o apenas quando encostar.
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Player")
+
         {
+           collider.gameObject.GetComponent<FamousPoints>().Pontosganhar(addFanPoint);
             sr.enabled = false;
             Bc.enabled = false;
             Collected.SetActive(true);
-
+         
             Destroy(gameObject, 0.2f);
         }
     }
+    
+    
+    
 }

@@ -1,13 +1,17 @@
     using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+    
 
 public class PlayerScript : MonoBehaviour
 {
     public float Speed;
+    
     public AudioSource AudioTocar;
     private Animator anim;
     private Rigidbody2D rig;
+    public AudioSource AudioJump;
+
     
     public float JumpForce;
     public bool IsJumping;
@@ -60,6 +64,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && !IsJumping)
         {
+            AudioJump.Play();
             rig.AddForce(new Vector2 (0f, JumpForce), ForceMode2D.Impulse);
             anim.SetBool("Jump", true);
         }
@@ -105,6 +110,7 @@ public class PlayerScript : MonoBehaviour
          }
      }
 
+     //Aréa de Sonoplastia do Jogador:
      public void TocarMusica()
      {
          if (Input.GetKeyDown(KeyCode.M))
@@ -117,6 +123,8 @@ public class PlayerScript : MonoBehaviour
              AudioTocar.Stop();
          }
      }
+     
+     
      
 }
 
