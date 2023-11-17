@@ -21,21 +21,21 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 2005096509, guid: fd5d6bbdfc43a4046a61c2868bbe6448, type: 3}
-    - time: 0.15
-      value: {fileID: 1505636319, guid: fd5d6bbdfc43a4046a61c2868bbe6448, type: 3}
     - time: 0.3
+      value: {fileID: 1505636319, guid: fd5d6bbdfc43a4046a61c2868bbe6448, type: 3}
+    - time: 0.6
       value: {fileID: 1890790254, guid: fd5d6bbdfc43a4046a61c2868bbe6448, type: 3}
-    - time: 0.45
+    - time: 0.9
       value: {fileID: 835378130, guid: fd5d6bbdfc43a4046a61c2868bbe6448, type: 3}
-    - time: 0.55
+    - time: 1.1
       value: {fileID: 1890790254, guid: fd5d6bbdfc43a4046a61c2868bbe6448, type: 3}
-    - time: 0.6333333
+    - time: 1.2666667
       value: {fileID: 835378130, guid: fd5d6bbdfc43a4046a61c2868bbe6448, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 30
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -61,7 +61,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.65
+    m_StopTime: 1.3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -80,4 +80,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.3
+    functionName: TocarMusica
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

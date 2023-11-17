@@ -14,8 +14,8 @@ public class FamousPoints : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        QntPoints.maxValue = FamousMaxPoints;
-        QntPoints.value = FamousAtualPoints;
+     QntPoints.maxValue = FamousMaxPoints;
+     QntPoints.value = FamousAtualPoints;
     }
 
     // Update is called once per frame

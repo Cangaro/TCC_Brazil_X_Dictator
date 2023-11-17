@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     public float Speed;
-    
+    public AudioSource AudioTocar;
     private Animator anim;
     private Rigidbody2D rig;
     
@@ -20,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        AudioTocar = GetComponent<AudioSource>();
 
     }
 
@@ -27,11 +28,13 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Play();
+        TocarMusica();
         if (IsPlayng) return;
         Move();
         Jump();
         
     }
+    
     public void Move()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
@@ -88,11 +91,12 @@ public class PlayerScript : MonoBehaviour
      {
          if (Input.GetKey(KeyCode.M))
          {
+             
              IsPlayng = true;
              anim.SetBool("MusicAnim", true);
              
          }
-
+         
          if (Input.GetKeyUp(KeyCode.M))
          {
              IsPlayng = false;
@@ -100,5 +104,19 @@ public class PlayerScript : MonoBehaviour
              
          }
      }
+
+     public void TocarMusica()
+     {
+         if (Input.GetKeyDown(KeyCode.M))
+         {
+             AudioTocar.Play();
+         }
+         
+         if (Input.GetKeyUp(KeyCode.M))
+         {
+             AudioTocar.Stop();
+         }
+     }
+     
 }
 
